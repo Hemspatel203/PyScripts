@@ -36,8 +36,8 @@ for groups in emailReg.findall(text):
 
 # TODO : copy results to the clipboard
 if len(matches) > 0:
-	pyperclip.copy('\n'.join(matches))
+	pyperclip.copy('\n'.join(set(matches))) 	# set() removes duplication from list 
 	print('Copied to clipboard:')
-	print('\n'.join(matches))
+	print('\n'.join(set(matches)))
 else:
 	print('No Phone number and email')
