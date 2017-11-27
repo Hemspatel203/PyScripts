@@ -1,22 +1,23 @@
 #! python 3
 # phoneAndEmail.py - finds phone number and email addresses on the clipboard
+# 11/27/2017
 
 import re
 import pyperclip
 
 phoneReg = re.compile(r'''(
-	(\d{3}|\(\d{3}\))?   			# area Code
-	(\s|-|\.)?           			# seperator
-	(\d{3})              			# first 3 Digit
-	(\s|-|\.)			 			# seperator
-	(\d{4})				 			# last 4 Digit
+	(\d{3}|\(\d{3}\))?   		# area Code
+	(\s|-|\.)?           		# seperator
+	(\d{3})              		# first 3 Digit
+	(\s|-|\.)			# seperator
+	(\d{4})				# last 4 Digit
 	(\s*(ext|x|ext.)\s*(\d{2,5}))?	# extension
 	)''', re.VERBOSE)
 
 
 emailReg = re.compile(r'''(
 	[a-zA-Z0-9._%+-]+  				# username
-	@								# @ symbol
+	@						# @ symbol
 	[a-zA-Z0-9.-]+					# Domain name
 	(\.[a-zA-Z]{2,4})				# dot-something
 	)''',re.VERBOSE)
