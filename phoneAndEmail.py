@@ -1,5 +1,5 @@
 #! python 3
-# phoneAndEmail.py - finds phone number and email addresses on the clipboard
+# phoneAndEmail.py - finds phone number and email addresses from the clipboard
 # 11/27/2017
 
 import re
